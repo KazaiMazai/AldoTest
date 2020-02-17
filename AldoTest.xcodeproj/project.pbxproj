@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C2335286ADBE020F2F1F6685 /* Pods_AldoTest_AldoTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19D5DEFBF87553F609D9B5B9 /* Pods_AldoTest_AldoTestTests.framework */; };
+		E5DEC48B23FB47FB00DDFF7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DEC48A23FB47FB00DDFF7A /* AppDelegate.swift */; };
+		E5DEC48D23FB47FB00DDFF7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DEC48C23FB47FB00DDFF7A /* SceneDelegate.swift */; };
+		E5DEC48F23FB47FB00DDFF7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DEC48E23FB47FB00DDFF7A /* ViewController.swift */; };
+		E5DEC49223FB47FB00DDFF7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5DEC49023FB47FB00DDFF7A /* Main.storyboard */; };
+		E5DEC49423FB47FD00DDFF7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DEC49323FB47FD00DDFF7A /* Assets.xcassets */; };
+		E5DEC49723FB47FD00DDFF7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5DEC49523FB47FD00DDFF7A /* LaunchScreen.storyboard */; };
+		E5DEC4A223FB47FE00DDFF7A /* AldoTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DEC4A123FB47FE00DDFF7A /* AldoTestTests.swift */; };
+		E5DEC4AD23FB48C900DDFF7A /* CoreNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DEC4AC23FB48C900DDFF7A /* CoreNetwork.swift */; };
+		E5DEC4B223FB495000DDFF7A /* CoreNetworkBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DEC4B123FB495000DDFF7A /* CoreNetworkBuilder.swift */; };
+		FF5A2A39C6813055B6AEE18F /* Pods_AldoTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092510B4131980752E8366A4 /* Pods_AldoTest.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E5DEC49E23FB47FE00DDFF7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5DEC47F23FB47FB00DDFF7A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5DEC48623FB47FB00DDFF7A;
+			remoteInfo = AldoTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		092510B4131980752E8366A4 /* Pods_AldoTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AldoTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19D5DEFBF87553F609D9B5B9 /* Pods_AldoTest_AldoTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AldoTest_AldoTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A11CADE52151B9C2B29873A9 /* Pods-AldoTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AldoTest.debug.xcconfig"; path = "Target Support Files/Pods-AldoTest/Pods-AldoTest.debug.xcconfig"; sourceTree = "<group>"; };
+		B2D10F65F54F3CC8C1C44ADE /* Pods-AldoTest-AldoTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AldoTest-AldoTestTests.debug.xcconfig"; path = "Target Support Files/Pods-AldoTest-AldoTestTests/Pods-AldoTest-AldoTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CC178A4F536C1D8DBEADB49E /* Pods-AldoTest-AldoTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AldoTest-AldoTestTests.release.xcconfig"; path = "Target Support Files/Pods-AldoTest-AldoTestTests/Pods-AldoTest-AldoTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		E45AF8FF2B786DB2A965809B /* Pods-AldoTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AldoTest.release.xcconfig"; path = "Target Support Files/Pods-AldoTest/Pods-AldoTest.release.xcconfig"; sourceTree = "<group>"; };
+		E5DEC48723FB47FB00DDFF7A /* AldoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AldoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5DEC48A23FB47FB00DDFF7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E5DEC48C23FB47FB00DDFF7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E5DEC48E23FB47FB00DDFF7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E5DEC49123FB47FB00DDFF7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E5DEC49323FB47FD00DDFF7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E5DEC49623FB47FD00DDFF7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E5DEC49823FB47FD00DDFF7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5DEC49D23FB47FE00DDFF7A /* AldoTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AldoTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5DEC4A123FB47FE00DDFF7A /* AldoTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AldoTestTests.swift; sourceTree = "<group>"; };
+		E5DEC4A323FB47FE00DDFF7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5DEC4AC23FB48C900DDFF7A /* CoreNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreNetwork.swift; sourceTree = "<group>"; };
+		E5DEC4B123FB495000DDFF7A /* CoreNetworkBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreNetworkBuilder.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E5DEC48423FB47FB00DDFF7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF5A2A39C6813055B6AEE18F /* Pods_AldoTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5DEC49A23FB47FE00DDFF7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2335286ADBE020F2F1F6685 /* Pods_AldoTest_AldoTestTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		750F9AEEF4D56FD27630ACEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				092510B4131980752E8366A4 /* Pods_AldoTest.framework */,
+				19D5DEFBF87553F609D9B5B9 /* Pods_AldoTest_AldoTestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE1A882BE16D775BB021C06C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A11CADE52151B9C2B29873A9 /* Pods-AldoTest.debug.xcconfig */,
+				E45AF8FF2B786DB2A965809B /* Pods-AldoTest.release.xcconfig */,
+				B2D10F65F54F3CC8C1C44ADE /* Pods-AldoTest-AldoTestTests.debug.xcconfig */,
+				CC178A4F536C1D8DBEADB49E /* Pods-AldoTest-AldoTestTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E5DEC47E23FB47FB00DDFF7A = {
+			isa = PBXGroup;
+			children = (
+				E5DEC48923FB47FB00DDFF7A /* AldoTest */,
+				E5DEC4A023FB47FE00DDFF7A /* AldoTestTests */,
+				E5DEC48823FB47FB00DDFF7A /* Products */,
+				BE1A882BE16D775BB021C06C /* Pods */,
+				750F9AEEF4D56FD27630ACEF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E5DEC48823FB47FB00DDFF7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E5DEC48723FB47FB00DDFF7A /* AldoTest.app */,
+				E5DEC49D23FB47FE00DDFF7A /* AldoTestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E5DEC48923FB47FB00DDFF7A /* AldoTest */ = {
+			isa = PBXGroup;
+			children = (
+				E5DEC4AE23FB490000DDFF7A /* Network */,
+				E5DEC48A23FB47FB00DDFF7A /* AppDelegate.swift */,
+				E5DEC48C23FB47FB00DDFF7A /* SceneDelegate.swift */,
+				E5DEC48E23FB47FB00DDFF7A /* ViewController.swift */,
+				E5DEC49023FB47FB00DDFF7A /* Main.storyboard */,
+				E5DEC49323FB47FD00DDFF7A /* Assets.xcassets */,
+				E5DEC49523FB47FD00DDFF7A /* LaunchScreen.storyboard */,
+				E5DEC49823FB47FD00DDFF7A /* Info.plist */,
+			);
+			path = AldoTest;
+			sourceTree = "<group>";
+		};
+		E5DEC4A023FB47FE00DDFF7A /* AldoTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				E5DEC4A123FB47FE00DDFF7A /* AldoTestTests.swift */,
+				E5DEC4A323FB47FE00DDFF7A /* Info.plist */,
+			);
+			path = AldoTestTests;
+			sourceTree = "<group>";
+		};
+		E5DEC4AE23FB490000DDFF7A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E5DEC4AC23FB48C900DDFF7A /* CoreNetwork.swift */,
+				E5DEC4B123FB495000DDFF7A /* CoreNetworkBuilder.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E5DEC48623FB47FB00DDFF7A /* AldoTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5DEC4A623FB47FE00DDFF7A /* Build configuration list for PBXNativeTarget "AldoTest" */;
+			buildPhases = (
+				73E7FA38D266C5F47240C01E /* [CP] Check Pods Manifest.lock */,
+				E5DEC48323FB47FB00DDFF7A /* Sources */,
+				E5DEC48423FB47FB00DDFF7A /* Frameworks */,
+				E5DEC48523FB47FB00DDFF7A /* Resources */,
+				B05E6C8FE7FC82CD59160C0E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AldoTest;
+			productName = AldoTest;
+			productReference = E5DEC48723FB47FB00DDFF7A /* AldoTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E5DEC49C23FB47FE00DDFF7A /* AldoTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5DEC4A923FB47FE00DDFF7A /* Build configuration list for PBXNativeTarget "AldoTestTests" */;
+			buildPhases = (
+				1671C5A453C8A6EDBD69B58A /* [CP] Check Pods Manifest.lock */,
+				E5DEC49923FB47FE00DDFF7A /* Sources */,
+				E5DEC49A23FB47FE00DDFF7A /* Frameworks */,
+				E5DEC49B23FB47FE00DDFF7A /* Resources */,
+				B345662AE852A30B2142E7B1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5DEC49F23FB47FE00DDFF7A /* PBXTargetDependency */,
+			);
+			name = AldoTestTests;
+			productName = AldoTestTests;
+			productReference = E5DEC49D23FB47FE00DDFF7A /* AldoTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E5DEC47F23FB47FB00DDFF7A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Piyush Sharma";
+				TargetAttributes = {
+					E5DEC48623FB47FB00DDFF7A = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					E5DEC49C23FB47FE00DDFF7A = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = E5DEC48623FB47FB00DDFF7A;
+					};
+				};
+			};
+			buildConfigurationList = E5DEC48223FB47FB00DDFF7A /* Build configuration list for PBXProject "AldoTest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E5DEC47E23FB47FB00DDFF7A;
+			productRefGroup = E5DEC48823FB47FB00DDFF7A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E5DEC48623FB47FB00DDFF7A /* AldoTest */,
+				E5DEC49C23FB47FE00DDFF7A /* AldoTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E5DEC48523FB47FB00DDFF7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5DEC49723FB47FD00DDFF7A /* LaunchScreen.storyboard in Resources */,
+				E5DEC49423FB47FD00DDFF7A /* Assets.xcassets in Resources */,
+				E5DEC49223FB47FB00DDFF7A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5DEC49B23FB47FE00DDFF7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1671C5A453C8A6EDBD69B58A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AldoTest-AldoTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73E7FA38D266C5F47240C01E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AldoTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B05E6C8FE7FC82CD59160C0E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AldoTest/Pods-AldoTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AldoTest/Pods-AldoTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AldoTest/Pods-AldoTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B345662AE852A30B2142E7B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AldoTest-AldoTestTests/Pods-AldoTest-AldoTestTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AldoTest-AldoTestTests/Pods-AldoTest-AldoTestTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AldoTest-AldoTestTests/Pods-AldoTest-AldoTestTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E5DEC48323FB47FB00DDFF7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5DEC48F23FB47FB00DDFF7A /* ViewController.swift in Sources */,
+				E5DEC48B23FB47FB00DDFF7A /* AppDelegate.swift in Sources */,
+				E5DEC4B223FB495000DDFF7A /* CoreNetworkBuilder.swift in Sources */,
+				E5DEC48D23FB47FB00DDFF7A /* SceneDelegate.swift in Sources */,
+				E5DEC4AD23FB48C900DDFF7A /* CoreNetwork.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5DEC49923FB47FE00DDFF7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5DEC4A223FB47FE00DDFF7A /* AldoTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E5DEC49F23FB47FE00DDFF7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5DEC48623FB47FB00DDFF7A /* AldoTest */;
+			targetProxy = E5DEC49E23FB47FE00DDFF7A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E5DEC49023FB47FB00DDFF7A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5DEC49123FB47FB00DDFF7A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E5DEC49523FB47FD00DDFF7A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5DEC49623FB47FD00DDFF7A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E5DEC4A423FB47FE00DDFF7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E5DEC4A523FB47FE00DDFF7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E5DEC4A723FB47FE00DDFF7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A11CADE52151B9C2B29873A9 /* Pods-AldoTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AldoTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AldoGroup.AldoTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E5DEC4A823FB47FE00DDFF7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E45AF8FF2B786DB2A965809B /* Pods-AldoTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AldoTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AldoGroup.AldoTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E5DEC4AA23FB47FE00DDFF7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2D10F65F54F3CC8C1C44ADE /* Pods-AldoTest-AldoTestTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AldoTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AldoGroup.AldoTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AldoTest.app/AldoTest";
+			};
+			name = Debug;
+		};
+		E5DEC4AB23FB47FE00DDFF7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC178A4F536C1D8DBEADB49E /* Pods-AldoTest-AldoTestTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AldoTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AldoGroup.AldoTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AldoTest.app/AldoTest";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E5DEC48223FB47FB00DDFF7A /* Build configuration list for PBXProject "AldoTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5DEC4A423FB47FE00DDFF7A /* Debug */,
+				E5DEC4A523FB47FE00DDFF7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5DEC4A623FB47FE00DDFF7A /* Build configuration list for PBXNativeTarget "AldoTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5DEC4A723FB47FE00DDFF7A /* Debug */,
+				E5DEC4A823FB47FE00DDFF7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5DEC4A923FB47FE00DDFF7A /* Build configuration list for PBXNativeTarget "AldoTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5DEC4AA23FB47FE00DDFF7A /* Debug */,
+				E5DEC4AB23FB47FE00DDFF7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E5DEC47F23FB47FB00DDFF7A /* Project object */;
+}

@@ -1,0 +1,24 @@
+PODS:
+  - AHNetwork (0.2.4):
+    - ALEither
+    - EitherResult
+  - ALEither (0.1.8)
+  - EitherResult (0.1.5)
+
+DEPENDENCIES:
+  - AHNetwork
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AHNetwork
+    - ALEither
+    - EitherResult
+
+SPEC CHECKSUMS:
+  AHNetwork: 7bd7d6a62cac821ff6d685d39d906bb872e35724
+  ALEither: 57cfaba77b3a2c2e15741b16213b515d9bc839a6
+  EitherResult: 9a67a8cd25fa6d6f8ded0e7304ea2eb302bcbbc8
+
+PODFILE CHECKSUM: cfeeaec90164decf7956143d0434d0b40aa394ee
+
+COCOAPODS: 1.8.4
