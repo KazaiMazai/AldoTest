@@ -10,7 +10,6 @@ import Foundation
 import AHNetwork
 import CryptoKit
 
-
 extension IRequest {
     var cachableRequest: CachableNetworkRequest {
         return CachableNetworkRequestImpl(baseURL: baseURL, path: path, parameters: parameters)

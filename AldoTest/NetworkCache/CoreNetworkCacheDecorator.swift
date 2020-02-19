@@ -10,11 +10,14 @@ import Foundation
 import AHNetwork
 import EitherResult
 
-final class CoreNetworkCacheDecorator<CoreNetworkType: CoreNetwork, CacheProvider: NetworkCacheProvider> {
+final class CoreNetworkCacheDecorator<CoreNetworkType, CacheProviderType> where CoreNetworkType: CoreNetwork,
+                                                                                CacheProviderType: CacheProvider,
+                                                                                CacheProviderType.Value == Data,
+                                                                                CacheProviderType.Key == CachableNetworkRequest {
     private let coreNetwork: CoreNetworkType
-    private let cacheProvider: CacheProvider
+    private let cacheProvider: CacheProviderType
 
-    init(coreNetwork: CoreNetworkType, cacheProvider: CacheProvider) {
+    init(coreNetwork: CoreNetworkType, cacheProvider: CacheProviderType) {
         self.coreNetwork = coreNetwork
         self.cacheProvider = cacheProvider
     }
@@ -24,7 +27,7 @@ final class CoreNetworkCacheDecorator<CoreNetworkType: CoreNetwork, CacheProvide
 
 extension CoreNetworkCacheDecorator: CoreNetwork {
     func send(request: IRequest, completion: @escaping (ALResult<Data>) -> Void) {
-        cacheProvider.retrieve(request: request.cachableRequest) { [weak self] in self?.handleResultFromCache($0, for: request, completion: completion) }
+        cacheProvider.retrieveObjectFor(key: request.cachableRequest) { [weak self] in self?.handleResultFromCache($0, for: request, completion: completion) }
     }
 
     private func handleResultFromCache(_ result: ALResult<CachedResult<Data>>,
@@ -57,7 +60,7 @@ extension CoreNetworkCacheDecorator: CoreNetwork {
     private func processDataFromNetworkResponse(_ data: Data,
                                              for request: IRequest,
                                              completion: @escaping Callback<Data>) {
-
-        cacheProvider.addToCache(data, for: request.cachableRequest) { completion(.right(data)) }
+        cacheProvider.addObject(data, for: request.cachableRequest) { completion(.right(data)) }
     }
 }
+

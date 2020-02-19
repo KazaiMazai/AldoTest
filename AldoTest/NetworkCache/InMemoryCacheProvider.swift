@@ -8,12 +8,14 @@
 
 import Foundation
 
-final class InMemoryNetworkCacheProvider {
+final class InMemoryCacheProvider<Key, Value> where Key: CachableObjectKeyProtocol & Hashable,
+                                                    Value: CachableObjectProtocol {
+    
     private let cacheTimestampProvider: CacheTimestampProvider
     private let cacheLifespanTimeInterval: TimeInterval
 
-    private var cache: NSCache<NSString, NSData>
-    private var expirationDateForCachedKeys: [String: Date]
+    private var cache: NSCache<Key.KeyType, Value.ObjectType>
+    private var expirationDateForCachedKeys: [Key: Date]
 
     init(cacheTimestampProvider: CacheTimestampProvider = CurrentDateCacheTimestampProvider(), cacheLifespanTimeInterval: TimeInterval) {
         cache = NSCache()
@@ -24,39 +26,38 @@ final class InMemoryNetworkCacheProvider {
     }
 }
 
-// MARK:- NetworkCacheProvider Protocol
+// MARK:- CacheProvider Protocol
 
-extension InMemoryNetworkCacheProvider: NetworkCacheProvider {
-    func retrieve(request: CachableNetworkRequest, completion: @escaping Callback<CachedResult<Data>>) {
-        let requestHashString = request.hashString
-
-        guard let cachedObject = cache.object(forKey: NSString(string: requestHashString)) else {
+extension InMemoryCacheProvider: CacheProvider {
+    func retrieveObjectFor(key: Key, completion: @escaping Callback<CachedResult<Value>>) {
+        guard let cachedObject = cache.object(forKey: key.key) else {
             completion(.right(.notFound))
             return
         }
 
-        guard let expirationDate = expirationDateForCachedKeys[requestHashString] else {
+        guard let expirationDate = expirationDateForCachedKeys[key] else {
             completion(.wrong(InMemoryNetworkCacheProviderError.cacheExpirationDateNotFound))
             return
         }
 
         guard cacheTimestampProvider.currentTimestamp.compare(expirationDate) == .orderedAscending else {
-            cache.removeObject(forKey: NSString(string: requestHashString))
-            expirationDateForCachedKeys.removeValue(forKey: requestHashString)
+            cache.removeObject(forKey: key.key)
+            expirationDateForCachedKeys.removeValue(forKey: key)
             completion(.right(.stale))
             return
         }
 
-        completion(.right(.cached(Data(referencing: cachedObject))))
+        completion(.right(.cached(Value(from: cachedObject))))
     }
 
-    func addToCache(_ data: Data, for request: CachableNetworkRequest, completion: @escaping () -> Void) {
-        let requestHashString = request.hashString
-        cache.setObject(NSData(data: data), forKey: NSString(string: requestHashString))
-        expirationDateForCachedKeys[requestHashString] = cacheTimestampProvider.currentTimestamp.addingTimeInterval(cacheLifespanTimeInterval)
+    func addObject(_ object: Value, for key: Key, completion: @escaping () -> Void) {
+        cache.setObject(object.value, forKey: key.key)
+        expirationDateForCachedKeys[key] = cacheTimestampProvider.currentTimestamp.addingTimeInterval(cacheLifespanTimeInterval)
         completion()
     }
 }
+
+// MARK:- InMemoryNetworkCacheProviderError
 
 enum InMemoryNetworkCacheProviderError: LocalizedError {
     case cacheExpirationDateNotFound
@@ -72,3 +73,4 @@ enum InMemoryNetworkCacheProviderError: LocalizedError {
         return msg
     }
 }
+

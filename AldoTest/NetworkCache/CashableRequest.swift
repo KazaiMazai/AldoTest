@@ -21,8 +21,12 @@ struct CachableNetworkRequestImpl: CachableNetworkRequest {
     var parameters: [String : String]
 }
 
-extension CachableNetworkRequest {
-    var hashString: String {
+extension CachableNetworkRequestImpl: CachableObjectKeyProtocol {
+    var key: NSString {
+        return NSString(string: hashString)
+    }
+
+    private var hashString: String {
         let parametersString = parameters.map { return "\($0.0):\($0.1)" }.joined(separator: ",")
         let stringToUseForHash = [baseURL, path, parametersString].joined(separator: ";")
         return MD5(string: stringToUseForHash)
