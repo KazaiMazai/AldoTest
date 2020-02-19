@@ -24,7 +24,7 @@ final class CoreNetworkCacheDecorator<CoreNetworkType: CoreNetwork, CacheProvide
 
 extension CoreNetworkCacheDecorator: CoreNetwork {
     func send(request: IRequest, completion: @escaping (ALResult<Data>) -> Void) {
-        cacheProvider.retrieve(request: request) { [weak self] in self?.handleResultFromCache($0, for: request, completion: completion) }
+        cacheProvider.retrieve(request: request.cachableRequest) { [weak self] in self?.handleResultFromCache($0, for: request, completion: completion) }
     }
 
     private func handleResultFromCache(_ result: ALResult<CachedResult<Data>>,
@@ -58,6 +58,6 @@ extension CoreNetworkCacheDecorator: CoreNetwork {
                                              for request: IRequest,
                                              completion: @escaping Callback<Data>) {
 
-        cacheProvider.addToCache(data, for: request) { completion(.right(data)) }
+        cacheProvider.addToCache(data, for: request.cachableRequest) { completion(.right(data)) }
     }
 }

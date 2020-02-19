@@ -11,6 +11,6 @@ import AHNetwork
 import EitherResult
 
 protocol NetworkCacheProvider {
-    func retrieve(request: IRequest, completion: @escaping Callback<CachedResult<Data>>)
-    func addToCache(_ data: Data, for request: IRequest, completion: @escaping () -> Void)
+    func retrieve(request: CachableNetworkRequest, completion: @escaping Callback<CachedResult<Data>>)
+    func addToCache(_ data: Data, for request: CachableNetworkRequest, completion: @escaping () -> Void)
 }

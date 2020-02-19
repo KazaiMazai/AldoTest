@@ -1,5 +1,5 @@
 //
-//  CachableNetworkRequest.swift
+//  CashableRequest.swift
 //  AldoTest
 //
 //  Created by Sergey Kazakov on 19/02/2020.
@@ -7,10 +7,21 @@
 //
 
 import Foundation
-import AHNetwork
 import CryptoKit
 
-extension IRequest {
+protocol CachableNetworkRequest {
+    var baseURL: String { get }
+    var path: String { get }
+    var parameters: [String: String] { get }
+}
+
+struct CachableNetworkRequestImpl: CachableNetworkRequest {
+    var baseURL: String
+    var path: String
+    var parameters: [String : String]
+}
+
+extension CachableNetworkRequest {
     var hashString: String {
         let parametersString = parameters.map { return "\($0.0):\($0.1)" }.joined(separator: ",")
         let stringToUseForHash = [baseURL, path, parametersString].joined(separator: ";")
@@ -22,6 +33,3 @@ extension IRequest {
         return digest.map { String(format: "%02hhx", $0) }.joined()
     }
 }
-
-
-
