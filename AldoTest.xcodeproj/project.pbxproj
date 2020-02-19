@@ -17,6 +17,16 @@
 		E5DEC4A223FB47FE00DDFF7A /* AldoTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DEC4A123FB47FE00DDFF7A /* AldoTestTests.swift */; };
 		E5DEC4AD23FB48C900DDFF7A /* CoreNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DEC4AC23FB48C900DDFF7A /* CoreNetwork.swift */; };
 		E5DEC4B223FB495000DDFF7A /* CoreNetworkBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DEC4B123FB495000DDFF7A /* CoreNetworkBuilder.swift */; };
+		EA213BD423FC2A6E008A1A69 /* CacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA213BD323FC2A6E008A1A69 /* CacheProvider.swift */; };
+		EA213BD623FC5DEE008A1A69 /* CoreNetworkCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA213BD523FC5DEE008A1A69 /* CoreNetworkCacheDecorator.swift */; };
+		EA213BD823FD13DD008A1A69 /* CachedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA213BD723FD13DD008A1A69 /* CachedResult.swift */; };
+		EA213BDA23FD1C25008A1A69 /* InMemoryCacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA213BD923FD1C25008A1A69 /* InMemoryCacheProvider.swift */; };
+		EA213BDE23FD2A2D008A1A69 /* IRequestCacheKeyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA213BDD23FD2A2D008A1A69 /* IRequestCacheKeyExtension.swift */; };
+		EA213BE023FD31F4008A1A69 /* CacheTimestampProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA213BDF23FD31F4008A1A69 /* CacheTimestampProvider.swift */; };
+		EA213BE323FD3622008A1A69 /* MockCacheTimestampProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA213BE223FD3622008A1A69 /* MockCacheTimestampProvider.swift */; };
+		EA213BE723FD5B3B008A1A69 /* CachableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA213BE623FD5B3B008A1A69 /* CachableProtocol.swift */; };
+		EA213BE923FD5C58008A1A69 /* DiskCacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA213BE823FD5C58008A1A69 /* DiskCacheProvider.swift */; };
+		EA213BFE23FD74F4008A1A69 /* InMemoryCacheProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA213BFD23FD74F4008A1A69 /* InMemoryCacheProviderTests.swift */; };
 		FF5A2A39C6813055B6AEE18F /* Pods_AldoTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092510B4131980752E8366A4 /* Pods_AldoTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +60,16 @@
 		E5DEC4A323FB47FE00DDFF7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5DEC4AC23FB48C900DDFF7A /* CoreNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreNetwork.swift; sourceTree = "<group>"; };
 		E5DEC4B123FB495000DDFF7A /* CoreNetworkBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreNetworkBuilder.swift; sourceTree = "<group>"; };
+		EA213BD323FC2A6E008A1A69 /* CacheProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheProvider.swift; sourceTree = "<group>"; };
+		EA213BD523FC5DEE008A1A69 /* CoreNetworkCacheDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreNetworkCacheDecorator.swift; sourceTree = "<group>"; };
+		EA213BD723FD13DD008A1A69 /* CachedResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedResult.swift; sourceTree = "<group>"; };
+		EA213BD923FD1C25008A1A69 /* InMemoryCacheProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryCacheProvider.swift; sourceTree = "<group>"; };
+		EA213BDD23FD2A2D008A1A69 /* IRequestCacheKeyExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRequestCacheKeyExtension.swift; sourceTree = "<group>"; };
+		EA213BDF23FD31F4008A1A69 /* CacheTimestampProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheTimestampProvider.swift; sourceTree = "<group>"; };
+		EA213BE223FD3622008A1A69 /* MockCacheTimestampProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCacheTimestampProvider.swift; sourceTree = "<group>"; };
+		EA213BE623FD5B3B008A1A69 /* CachableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachableProtocol.swift; sourceTree = "<group>"; };
+		EA213BE823FD5C58008A1A69 /* DiskCacheProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskCacheProvider.swift; sourceTree = "<group>"; };
+		EA213BFD23FD74F4008A1A69 /* InMemoryCacheProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryCacheProviderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +150,9 @@
 		E5DEC4A023FB47FE00DDFF7A /* AldoTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				EA213BE123FD360C008A1A69 /* Mocks */,
 				E5DEC4A123FB47FE00DDFF7A /* AldoTestTests.swift */,
+				EA213BFD23FD74F4008A1A69 /* InMemoryCacheProviderTests.swift */,
 				E5DEC4A323FB47FE00DDFF7A /* Info.plist */,
 			);
 			path = AldoTestTests;
@@ -139,10 +161,34 @@
 		E5DEC4AE23FB490000DDFF7A /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				EA213BD223FC27A1008A1A69 /* Cache */,
 				E5DEC4AC23FB48C900DDFF7A /* CoreNetwork.swift */,
 				E5DEC4B123FB495000DDFF7A /* CoreNetworkBuilder.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		EA213BD223FC27A1008A1A69 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				EA213BD723FD13DD008A1A69 /* CachedResult.swift */,
+				EA213BDD23FD2A2D008A1A69 /* IRequestCacheKeyExtension.swift */,
+				EA213BD323FC2A6E008A1A69 /* CacheProvider.swift */,
+				EA213BE623FD5B3B008A1A69 /* CachableProtocol.swift */,
+				EA213BD923FD1C25008A1A69 /* InMemoryCacheProvider.swift */,
+				EA213BE823FD5C58008A1A69 /* DiskCacheProvider.swift */,
+				EA213BDF23FD31F4008A1A69 /* CacheTimestampProvider.swift */,
+				EA213BD523FC5DEE008A1A69 /* CoreNetworkCacheDecorator.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		EA213BE123FD360C008A1A69 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				EA213BE223FD3622008A1A69 /* MockCacheTimestampProvider.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,8 +379,16 @@
 			files = (
 				E5DEC48F23FB47FB00DDFF7A /* ViewController.swift in Sources */,
 				E5DEC48B23FB47FB00DDFF7A /* AppDelegate.swift in Sources */,
+				EA213BE023FD31F4008A1A69 /* CacheTimestampProvider.swift in Sources */,
+				EA213BE923FD5C58008A1A69 /* DiskCacheProvider.swift in Sources */,
 				E5DEC4B223FB495000DDFF7A /* CoreNetworkBuilder.swift in Sources */,
+				EA213BE723FD5B3B008A1A69 /* CachableProtocol.swift in Sources */,
+				EA213BDE23FD2A2D008A1A69 /* IRequestCacheKeyExtension.swift in Sources */,
 				E5DEC48D23FB47FB00DDFF7A /* SceneDelegate.swift in Sources */,
+				EA213BD823FD13DD008A1A69 /* CachedResult.swift in Sources */,
+				EA213BDA23FD1C25008A1A69 /* InMemoryCacheProvider.swift in Sources */,
+				EA213BD423FC2A6E008A1A69 /* CacheProvider.swift in Sources */,
+				EA213BD623FC5DEE008A1A69 /* CoreNetworkCacheDecorator.swift in Sources */,
 				E5DEC4AD23FB48C900DDFF7A /* CoreNetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +397,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA213BFE23FD74F4008A1A69 /* InMemoryCacheProviderTests.swift in Sources */,
+				EA213BE323FD3622008A1A69 /* MockCacheTimestampProvider.swift in Sources */,
 				E5DEC4A223FB47FE00DDFF7A /* AldoTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +553,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZC6RHMUG6E;
 				INFOPLIST_FILE = AldoTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -515,6 +572,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZC6RHMUG6E;
 				INFOPLIST_FILE = AldoTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -533,7 +591,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZC6RHMUG6E;
 				INFOPLIST_FILE = AldoTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -555,7 +615,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZC6RHMUG6E;
 				INFOPLIST_FILE = AldoTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
