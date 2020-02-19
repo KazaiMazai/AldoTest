@@ -20,6 +20,8 @@
 		EA213BD423FC2A6E008A1A69 /* NetworkCacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA213BD323FC2A6E008A1A69 /* NetworkCacheProvider.swift */; };
 		EA213BD623FC5DEE008A1A69 /* CoreNetworkCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA213BD523FC5DEE008A1A69 /* CoreNetworkCacheDecorator.swift */; };
 		EA213BD823FD13DD008A1A69 /* CachedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA213BD723FD13DD008A1A69 /* CachedResult.swift */; };
+		EA213BDA23FD1C25008A1A69 /* InMemoryNetworkCacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA213BD923FD1C25008A1A69 /* InMemoryNetworkCacheProvider.swift */; };
+		EA213BDC23FD2175008A1A69 /* CachableNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA213BDB23FD2175008A1A69 /* CachableNetworkRequest.swift */; };
 		FF5A2A39C6813055B6AEE18F /* Pods_AldoTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092510B4131980752E8366A4 /* Pods_AldoTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,8 @@
 		EA213BD323FC2A6E008A1A69 /* NetworkCacheProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCacheProvider.swift; sourceTree = "<group>"; };
 		EA213BD523FC5DEE008A1A69 /* CoreNetworkCacheDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreNetworkCacheDecorator.swift; sourceTree = "<group>"; };
 		EA213BD723FD13DD008A1A69 /* CachedResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedResult.swift; sourceTree = "<group>"; };
+		EA213BD923FD1C25008A1A69 /* InMemoryNetworkCacheProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryNetworkCacheProvider.swift; sourceTree = "<group>"; };
+		EA213BDB23FD2175008A1A69 /* CachableNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachableNetworkRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,8 @@
 				EA213BD323FC2A6E008A1A69 /* NetworkCacheProvider.swift */,
 				EA213BD523FC5DEE008A1A69 /* CoreNetworkCacheDecorator.swift */,
 				EA213BD723FD13DD008A1A69 /* CachedResult.swift */,
+				EA213BD923FD1C25008A1A69 /* InMemoryNetworkCacheProvider.swift */,
+				EA213BDB23FD2175008A1A69 /* CachableNetworkRequest.swift */,
 			);
 			path = NetworkCache;
 			sourceTree = "<group>";
@@ -353,9 +359,11 @@
 				E5DEC4B223FB495000DDFF7A /* CoreNetworkBuilder.swift in Sources */,
 				E5DEC48D23FB47FB00DDFF7A /* SceneDelegate.swift in Sources */,
 				EA213BD823FD13DD008A1A69 /* CachedResult.swift in Sources */,
+				EA213BDA23FD1C25008A1A69 /* InMemoryNetworkCacheProvider.swift in Sources */,
 				EA213BD423FC2A6E008A1A69 /* NetworkCacheProvider.swift in Sources */,
 				EA213BD623FC5DEE008A1A69 /* CoreNetworkCacheDecorator.swift in Sources */,
 				E5DEC4AD23FB48C900DDFF7A /* CoreNetwork.swift in Sources */,
+				EA213BDC23FD2175008A1A69 /* CachableNetworkRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
