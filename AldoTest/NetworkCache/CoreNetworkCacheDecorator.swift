@@ -10,16 +10,15 @@ import Foundation
 import AHNetwork
 import EitherResult
 
-final class CoreNetworkCacheDecorator {
-    private let coreNetwork: CoreNetwork
-    private let cacheProvider: NetworkCacheProvider
+final class CoreNetworkCacheDecorator<CoreNetworkType: CoreNetwork, CacheProvider: NetworkCacheProvider> {
+    private let coreNetwork: CoreNetworkType
+    private let cacheProvider: CacheProvider
 
-    init(coreNetwork: CoreNetwork, cacheProvider: NetworkCacheProvider) {
+    init(coreNetwork: CoreNetworkType, cacheProvider: CacheProvider) {
         self.coreNetwork = coreNetwork
         self.cacheProvider = cacheProvider
     }
 }
-
 
 // MARK:- CoreNetwork Protocol
 
@@ -27,6 +26,7 @@ extension CoreNetworkCacheDecorator: CoreNetwork {
     func send(request: IRequest, completion: @escaping (ALResult<Data>) -> Void) {
         cacheProvider.retrieve(request: request) { [weak self] in self?.handleResultFromCache($0, for: request, completion: completion) }
     }
+
     private func handleResultFromCache(_ result: ALResult<CachedResult<Data>>,
                                      for request: IRequest,
                                      completion: @escaping Callback<Data>) {
