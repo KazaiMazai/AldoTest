@@ -7,3 +7,32 @@
 //
 
 import Foundation
+
+final class DiskCacheProvider<Key, Value> where Key: CachableObjectKeyProtocol & Hashable,
+                                                    Value: CachableObjectProtocol & Codable {
+
+    private let cacheTimestampProvider: CacheTimestampProvider
+    private let cacheLifespanTimeInterval: TimeInterval
+
+    init(cacheTimestampProvider: CacheTimestampProvider = CurrentDateCacheTimestampProvider(), cacheLifespanTimeInterval: TimeInterval) {
+        self.cacheTimestampProvider = cacheTimestampProvider
+        self.cacheLifespanTimeInterval = cacheLifespanTimeInterval
+    }
+}
+
+
+// MARK:- CacheProvider Protocol
+
+/**
+  Read and write to disk will be implemented here
+ */
+
+extension DiskCacheProvider: CacheProvider {
+    func retrieveObjectFor(key: Key, completion: @escaping Callback<CachedResult<Value>>) {
+        completion(.right(.notFound))
+    }
+
+    func addObject(_ data: Value, for key: Key, completion: @escaping () -> Void) {
+        completion()
+    }
+}
