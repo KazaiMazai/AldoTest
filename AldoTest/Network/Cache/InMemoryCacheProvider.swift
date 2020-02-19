@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+    InMemoryCacheProvider wraps NSCache to conform to CacheProvider protocol
+ */
+
 final class InMemoryCacheProvider<Key, Value> where Key: CachableObjectKeyProtocol & Hashable,
                                                     Value: CachableObjectProtocol {
     

@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+    DiskCacheProvider simply uses file storage as cache
+ */
+
 final class DiskCacheProvider<Key, Value> where Key: CachableObjectKeyProtocol & Hashable,
                                                     Value: CachableObjectProtocol & Codable {
 

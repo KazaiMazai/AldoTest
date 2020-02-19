@@ -133,7 +133,6 @@
 		E5DEC48923FB47FB00DDFF7A /* AldoTest */ = {
 			isa = PBXGroup;
 			children = (
-				EA213BD223FC27A1008A1A69 /* NetworkCache */,
 				E5DEC4AE23FB490000DDFF7A /* Network */,
 				E5DEC48A23FB47FB00DDFF7A /* AppDelegate.swift */,
 				E5DEC48C23FB47FB00DDFF7A /* SceneDelegate.swift */,
@@ -159,13 +158,14 @@
 		E5DEC4AE23FB490000DDFF7A /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				EA213BD223FC27A1008A1A69 /* Cache */,
 				E5DEC4AC23FB48C900DDFF7A /* CoreNetwork.swift */,
 				E5DEC4B123FB495000DDFF7A /* CoreNetworkBuilder.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
 		};
-		EA213BD223FC27A1008A1A69 /* NetworkCache */ = {
+		EA213BD223FC27A1008A1A69 /* Cache */ = {
 			isa = PBXGroup;
 			children = (
 				EA213BD723FD13DD008A1A69 /* CachedResult.swift */,
@@ -177,7 +177,7 @@
 				EA213BDF23FD31F4008A1A69 /* CacheTimestampProvider.swift */,
 				EA213BD523FC5DEE008A1A69 /* CoreNetworkCacheDecorator.swift */,
 			);
-			path = NetworkCache;
+			path = Cache;
 			sourceTree = "<group>";
 		};
 		EA213BE123FD360C008A1A69 /* Mocks */ = {
