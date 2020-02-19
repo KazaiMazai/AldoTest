@@ -51,7 +51,7 @@ extension InMemoryCacheProvider: CacheProvider {
             return
         }
 
-        completion(.right(.cached(Value(from: cachedObject))))
+        completion(.right(.retrievedFromCache(Value(from: cachedObject))))
     }
 
     func addObject(_ object: Value, for key: Key, completion: @escaping () -> Void) {

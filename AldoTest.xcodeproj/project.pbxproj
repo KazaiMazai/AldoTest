@@ -26,6 +26,7 @@
 		EA213BE323FD3622008A1A69 /* MockCacheTimestampProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA213BE223FD3622008A1A69 /* MockCacheTimestampProvider.swift */; };
 		EA213BE723FD5B3B008A1A69 /* CachableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA213BE623FD5B3B008A1A69 /* CachableProtocol.swift */; };
 		EA213BE923FD5C58008A1A69 /* DiskCacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA213BE823FD5C58008A1A69 /* DiskCacheProvider.swift */; };
+		EA213BFE23FD74F4008A1A69 /* InMemoryCacheProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA213BFD23FD74F4008A1A69 /* InMemoryCacheProviderTests.swift */; };
 		FF5A2A39C6813055B6AEE18F /* Pods_AldoTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092510B4131980752E8366A4 /* Pods_AldoTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		EA213BE223FD3622008A1A69 /* MockCacheTimestampProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCacheTimestampProvider.swift; sourceTree = "<group>"; };
 		EA213BE623FD5B3B008A1A69 /* CachableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachableProtocol.swift; sourceTree = "<group>"; };
 		EA213BE823FD5C58008A1A69 /* DiskCacheProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskCacheProvider.swift; sourceTree = "<group>"; };
+		EA213BFD23FD74F4008A1A69 /* InMemoryCacheProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryCacheProviderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			children = (
 				EA213BE123FD360C008A1A69 /* Mocks */,
 				E5DEC4A123FB47FE00DDFF7A /* AldoTestTests.swift */,
+				EA213BFD23FD74F4008A1A69 /* InMemoryCacheProviderTests.swift */,
 				E5DEC4A323FB47FE00DDFF7A /* Info.plist */,
 			);
 			path = AldoTestTests;
@@ -394,6 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA213BFE23FD74F4008A1A69 /* InMemoryCacheProviderTests.swift in Sources */,
 				EA213BE323FD3622008A1A69 /* MockCacheTimestampProvider.swift in Sources */,
 				E5DEC4A223FB47FE00DDFF7A /* AldoTestTests.swift in Sources */,
 			);
@@ -587,7 +591,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZC6RHMUG6E;
 				INFOPLIST_FILE = AldoTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -609,7 +615,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZC6RHMUG6E;
 				INFOPLIST_FILE = AldoTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (

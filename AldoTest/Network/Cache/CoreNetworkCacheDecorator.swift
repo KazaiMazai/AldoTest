@@ -56,7 +56,7 @@ extension CoreNetworkCacheDecorator: CoreNetwork {
                                               for request: IRequest,
                                               completion: @escaping Callback<Data>) {
         switch result {
-        case .cached(let data):
+        case .retrievedFromCache(let data):
             completion(.right(data))
         case .stale, .notFound:
             coreNetwork.send(request: request) { [weak self] in self?.handleResultFromNetwork($0, for: request, completion: completion) }

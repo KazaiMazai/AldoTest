@@ -11,5 +11,5 @@ import Foundation
 enum CachedResult<T> {
     case stale
     case notFound
-    case cached(T)
+    case retrievedFromCache(T)
 }

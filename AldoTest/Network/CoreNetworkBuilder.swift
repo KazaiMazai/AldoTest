@@ -28,11 +28,12 @@ final class CoreNetworkBuilder {
 
     var cachedCoreNetwork: CoreNetwork {
         let diskCacheLayer = DiskCacheProvider<String, Data>(cacheLifespanTimeInterval: networkDiskCacheTimeInterval)
-        let diskCacheDecorator = CoreNetworkCacheDecorator(coreNetwork: coreNetwork, cacheProvider: diskCacheLayer)
+        let networkDecoratedWithDiskCache = CoreNetworkCacheDecorator(coreNetwork: coreNetwork, cacheProvider: diskCacheLayer)
 
         let inMemoryCacheLayer = InMemoryCacheProvider<String, Data>(cacheLifespanTimeInterval: networkInMemoryCacheTimeInterval)
-        let memoryWithDiskCacheDecorator = CoreNetworkCacheDecorator(coreNetwork: diskCacheDecorator, cacheProvider: inMemoryCacheLayer)
+        let memoryWithDiskCacheDecoratedNetwork = CoreNetworkCacheDecorator(coreNetwork: networkDecoratedWithDiskCache,
+                                                                            cacheProvider: inMemoryCacheLayer)
 
-        return memoryWithDiskCacheDecorator
+        return memoryWithDiskCacheDecoratedNetwork
     }
 }
