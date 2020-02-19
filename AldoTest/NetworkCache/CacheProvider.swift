@@ -15,5 +15,5 @@ protocol CacheProvider {
     associatedtype Value
 
     func retrieveObjectFor(key: Key, completion: @escaping Callback<CachedResult<Value>>)
-    func addObject(_ data: Value, for key: Key, completion: @escaping () -> Void)
+    func addObject(_ object: Value, for key: Key, completion: @escaping () -> Void)
 }

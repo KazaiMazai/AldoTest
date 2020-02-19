@@ -8,22 +8,11 @@
 
 import Foundation
 import CryptoKit
+import AHNetwork
 
-protocol CachableNetworkRequest {
-    var baseURL: String { get }
-    var path: String { get }
-    var parameters: [String: String] { get }
-}
-
-struct CachableNetworkRequestImpl: CachableNetworkRequest {
-    var baseURL: String
-    var path: String
-    var parameters: [String : String]
-}
-
-extension CachableNetworkRequestImpl: CachableObjectKeyProtocol {
-    var key: NSString {
-        return NSString(string: hashString)
+extension IRequest {
+    var cacheKey: String {
+        return hashString
     }
 
     private var hashString: String {

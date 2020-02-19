@@ -20,14 +20,11 @@ final class DiskCacheProvider<Key, Value> where Key: CachableObjectKeyProtocol &
     }
 }
 
-
 // MARK:- CacheProvider Protocol
 
-/**
-  Read and write to disk will be implemented here
- */
-
 extension DiskCacheProvider: CacheProvider {
+// MARK:- Read and write to disk will be implemented here
+
     func retrieveObjectFor(key: Key, completion: @escaping Callback<CachedResult<Value>>) {
         completion(.right(.notFound))
     }
